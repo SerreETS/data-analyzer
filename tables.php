@@ -1,6 +1,6 @@
 <?php
-    require_once("/partial/header.php");
-    require_once("/partial/nav.php");
+    require_once("partial/header.php");
+    require_once("partial/nav.php");
 ?>
 
         <div id="page-wrapper">
@@ -346,5 +346,5 @@
     <!-- /#wrapper -->
 
 <?php
-    require_once("/partial/footer.php");
+    require_once("partial/footer.php");
 ?>
