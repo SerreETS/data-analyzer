@@ -14,7 +14,7 @@
 
 		protected function executeAction() {
 
-			$hours = 12;
+			$hours = 6;
 			$status = 'DRY';
 			$role = 'T';
 

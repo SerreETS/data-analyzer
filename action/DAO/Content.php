@@ -10,7 +10,7 @@
 
             $statement = $connexion->prepare("SELECT * FROM Datas
             	LEFT JOIN InfoSensor ON Datas.IdSensor = InfoSensor.IdSensor
-            	WHERE DateReceived >= date_sub(NOW(), interval ? hour) AND InfoSensor.Role = ? AND InfoSensor.StatuSensor = ?
+            	WHERE DateReceived >= date_sub(NOW(), interval ? hour) AND DateReceived <= NOW() AND InfoSensor.Role = ? AND InfoSensor.StatuSensor = ?
             	ORDER BY DateReceived");
             $statement->bindParam(1, $hours);
             $statement->bindParam(2, $role);

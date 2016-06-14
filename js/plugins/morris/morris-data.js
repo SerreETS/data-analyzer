@@ -10,6 +10,7 @@ function test(data) {
         labels: ['Température', 'Humidité', 'Lumière visible', 'Lumière infra rouge'],
         pointSize: 2,
         hideHover: 'auto',
+        lineColors:['red', 'blue', 'pink', 'purple'],
         resize: true,
         smooth: false
     });
