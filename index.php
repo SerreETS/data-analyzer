@@ -1,4 +1,9 @@
 <?php
+    require_once("action/indexAction.php");
+
+    $action = new IndexAction();
+    $action->execute();
+
     require_once("partial/header.php");
     require_once("partial/nav.php");
 ?>
@@ -129,7 +134,7 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
+                                <h3 class="panel-title" style="font-size:24px; font-weigth:bold;"><i class="fa fa-bar-chart-o fa-fw"></i> État ambiant</h3>
                             </div>
                             <div class="panel-body">
                                 <div id="morris-area-chart"></div>
@@ -137,7 +142,38 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:24px; font-weigth:bold;"><i class="fa fa-bar-chart-o fa-fw"></i> Tableau2</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title" style="font-size:24px; font-weigth:bold;"><i class="fa fa-bar-chart-o fa-fw"></i> Tableau3</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="morris-area-chart3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- /.row -->
+
+                <script type="text/javascript">
+                    var obj = <?php echo json_encode($action->data); ?>;
+                    test(obj);
+                </script>
 
                 <div class="row">
 <!--                     <div class="col-lg-4">
@@ -199,7 +235,7 @@
                             </div>
                         </div> -->
                     </div>
-                    <div class="col-lg-4">
+<!--                     <div class="col-lg-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
@@ -272,7 +308,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- /.row -->
 

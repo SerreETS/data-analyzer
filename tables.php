@@ -2,7 +2,7 @@
     require_once("partial/header.php");
     require_once("partial/nav.php");
 ?>
-
+    <div id="wrapper">
         <div id="page-wrapper">
 
             <div class="container-fluid">
