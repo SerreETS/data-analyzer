@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin</a>
+                <a class="navbar-brand" href="index.php" style="height:51px; padding:none;"><img src="images/logo.png" width="35px" height="35px" style="margin:-5px;"></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -115,14 +115,14 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Données capteurs</a>
                     </li>
                     <!-- Affichage des graphiques, mais on débute seulement avec Dashboard et table -->
 <!--                     <li>
                         <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
                     </li> -->
                     <li>
-                        <a href="tables.php"><i class="fa fa-fw fa-table"></i> Tables</a>
+                        <a href="tables.php"><i class="fa fa-fw fa-table"></i> Liste des capteurs</a>
                     </li>
 <!--                     <li>
                         <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
