@@ -1,4 +1,9 @@
 <?php
+    require_once("action/tablesAction.php");
+
+    $action = new TablesAction();
+    $action->execute();
+
     require_once("partial/header.php");
     require_once("partial/nav.php");
 ?>
@@ -25,7 +30,7 @@
                 </div> -->
                 <!-- /.row -->
 
-                <div class="row">
+<!--                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Bordered Table</h2>
                         <div class="table-responsive">
@@ -84,62 +89,34 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-6">
-                        <h2>Bordered with Striped Rows</h2>
+                        <h2>Capteurs</h2>
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
+                                        <th># Capteur</th>
+                                        <th>Rôle</th>
+                                        <th>Description</th>
+                                        <th>Emplacement</th>
+                                        <th>Statut</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
+                                    <?php
+                                    for($i = 0; $i < count($action->sensors); $i++){
+                                    ?>
+                                        <tr>
+                                            <td><?= $action->sensors[$i]['NoSensor'] ?></td>
+                                            <td><?= $action->sensors[$i]['Role'] ?></td>
+                                            <td><?= $action->sensors[$i]['Description'] ?></td>
+                                            <td><?= $action->sensors[$i]['NoLocation'] ?></td>
+                                            <td><?= $action->sensors[$i]['StatuSensor'] ?></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -147,7 +124,7 @@
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
+<!--                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Basic Table</h2>
                         <div class="table-responsive">
@@ -266,10 +243,10 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.row -->
 
-                <div class="row">
+<!--                 <div class="row">
                     <div class="col-lg-6">
                         <h2>Contextual Classes</h2>
                         <div class="table-responsive">
@@ -333,7 +310,7 @@
                         <h2>Bootstrap Docs</h2>
                         <p>For complete documentation, please visit <a target="_blank" href="http://getbootstrap.com/css/#tables">Bootstrap's Tables Documentation</a>.</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.row -->
 
             </div>
